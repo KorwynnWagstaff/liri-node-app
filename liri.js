@@ -60,7 +60,7 @@ function spotifySong() {
 		secret: keys.spotifyKeys.client_secret
 	});
 	if (arg2 === undefined) {
-		searchSong = "The Sign";
+		searchSong = "Ace of Base";
 	}
 	else {
 		searchSong = arg2;
