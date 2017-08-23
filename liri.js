@@ -35,7 +35,7 @@ function getTweets() {
 	});
 	var parameters = {
 		screen_name: "LongLivePartyin",
-		count: 10
+		count: 5
 	};
 	client.get("statuses/user_timeline", parameters, function(err, tweets, response) {
 		if (!err) {
@@ -43,7 +43,7 @@ function getTweets() {
 				var data = ("Tweet Number: " + (i + 1) + "\n" + 
 					"Date: " + tweets[i].created_at + "\n" + 
 					"Content: " + tweets[i].text + "\n");
-				console.log("_______________")
+				console.log("______________________________")
 				console.log(data);
 			}
 		}
@@ -71,8 +71,9 @@ function spotifySong() {
 				"Song: " + data.tracks.items[0].name + "\n" +
 				"Preview Here: " + data.tracks.items[0].preview_url + "\n" +  
 				"Album: " + data.tracks.items[0].album.name);
-			console.log("_______________");
+			console.log("______________________________");
 			console.log(data2);
+			console.log("______________________________");
 		}
 		else {
 			console.log(err);
@@ -99,8 +100,9 @@ function getMovie() {
 				"Plot: " + JSON.parse(body)["Plot"] + "\n" +
 				"Actors: " + JSON.parse(body)["Actors"] + "\n" +
 				"Rotten Tomatoes URL: " + JSON.parse(body)["tomatoURL"]); 
-			console.log("_______________");
+			console.log("______________________________");
 			console.log(data3);
+			console.log("______________________________");
 		}
 		else {
 			console.log(err);
